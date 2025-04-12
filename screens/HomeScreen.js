@@ -6,22 +6,20 @@ const HomeScreen = () => {
   const posts = [
     {
       id: '1',
-      user: 'João Silva',
-      avatar: require('../assets/avatar1.png'),
+      user: 'Estados Unidos',
       location: 'Gerlach, NV 89412, Estados Unidos',
       image: require('../assets/post1.png'),
+      
     },
     {
       id: '2',
-      user: 'Maria Souza',
-      avatar: require('../assets/avatar2.png'),
+      user: 'Peru',
       location: 'Cusco, Peru',
       image: require('../assets/post2.png'),
     },
     {
       id: '3',
-      user: 'Pedro Alves',
-      avatar: require('../assets/avatar3.png'),
+      user: 'Rio de janeiro',
       location: 'Rio de Janeiro, Brasil',
       image: require('../assets/post3.png'),
     },
@@ -37,13 +35,14 @@ const HomeScreen = () => {
         </View>
       </View>
       <Image source={item.image} style={styles.postImage} />
+      
     </View>
   );
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Feed</Text>
+        <Text style={styles.headerTitle}>GeoSnap</Text>
       </View>
       <FlatList
         data={posts}
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
   },
   postContainer: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 10,
+    borderRadius:5,
     marginHorizontal: 10,
     marginVertical: 8,
     overflow: 'hidden',
@@ -91,15 +90,11 @@ const styles = StyleSheet.create({
   postHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 10,
+    padding:10,
   },
-  avatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-  },
+ 
   userInfo: {
-    marginLeft: 10,
+    marginLeft: 5,
   },
   userName: {
     fontWeight: 'bold',
@@ -114,6 +109,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 300,
     resizeMode: 'cover',
+  },
+  comentario: {
+    padding: 10,
+    fontSize: 14,
+    color: '#333',
   },
 });
 

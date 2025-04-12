@@ -93,10 +93,10 @@ const RegisterScreen = ({ navigation }) => {
         <View style={styles.inputContainer}>
           <TextInput
             style={styles.input}
-            placeholder="Idade"
+            placeholder="Ano do nascimento"
             value={age}
             onChangeText={setAge}
-            keyboardType="numeric"
+            keyboardType="new Date"
           />
         </View>
         

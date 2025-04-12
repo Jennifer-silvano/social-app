@@ -16,11 +16,34 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Este aplicativo usa a câmera para tirar fotos para o seu perfil"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Este aplicativo precisa acessar suas fotos para salvar imagens",
+          "savePhotosPermission": "Este aplicativo precisa de permissão para salvar fotos em sua galeria"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Este aplicativo usa sua localização para marcar onde as fotos foram tiradas"
+        }
+      ]
+    ],
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Este aplicativo usa a câmera para tirar fotos para o seu perfil",
         "NSLocationWhenInUseUsageDescription": "Este aplicativo usa sua localização para marcar onde as fotos foram tiradas",
+        "NSPhotoLibraryUsageDescription": "Este aplicativo precisa acessar suas fotos para salvar imagens",
+        "NSPhotoLibraryAddUsageDescription": "Este aplicativo precisa de permissão para salvar fotos em sua galeria",
         "NSFaceIDUsageDescription": "Este aplicativo usa autenticação biométrica para garantir segurança ao entrar"
       }
     },
@@ -32,6 +55,9 @@
       "permissions": [
         "CAMERA",
         "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
         "USE_BIOMETRIC",
         "USE_FINGERPRINT"
       ]
